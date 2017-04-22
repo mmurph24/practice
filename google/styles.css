@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 980px;
+  max-width: 1440px;
+  min-height: 485px;
+  max-height: 800px;
+  }
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-bar-list {
+  display: flex;
+  margin-top: 29px;
+  margin-right: 35px;
+  width: 250px;
+  justify-content: space-between;
+  list-style-type: none;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+}
+
+.top-bar-list a {
+  text-decoration: none;
+  color: #707070;
+}
+
+.top-bar-list a:hover {
+  text-decoration: underline;
+  color: #272727;
+}
+
+.headshot {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  top: -10px;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.search {
+  display: block;
+  margin: auto;
+  height: 44px;
+  width: 484px;
+  border: 1px solid #d5d5d5;
+  border-radius: 2px;
+  margin-top: 30px;
+  box-shadow: 0px 2px 2px 0px #e4e4e4;
+}
+
+input {
+  height: inherit;
+  width: 413px;
+  height: 36px;
+  font-size: 16px;
+  border: none;
+  margin-left: 18px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.mic-container {
+  height: 44px;
+  width: 51px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 513px;
+}
+
+.mic-image {
+  height: 23px;
+  width: 18px;
+}
+
+.button-container {
+  height: 57px;
+  width: 278px;
+  margin: auto;
+  margin-top: 34px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  background-color: #F3F3F3;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  color: #757575;
+  height: 34px;
+  width: auto;
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #F4F4F4;
+  border: 1px solid #C6C6C6;
+  color: #222222;
+}
+
+.button-container > a {
+  text-decoration: none;
+}
+
+.button-container > a:focus {
+  border: 1px solid #5f9bfd;
+}
+
+.footer {
+  background-color: #F2F2F2;
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  min-width: 980px;
+  position: block;
+}
+
+.left-footer, .right-footer {
+  height: 40px;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.left-footer a, .right-footer a {
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  color: #666666;
+  text-decoration: none;
+}
+
+.left-footer {
+  float: left;
+}
+
+.right-footer {
+  float: right;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer li {
+  list-style-type: none;
+}
+
+.footer li:hover {
+  text-decoration: underline;
+}
+
+.right-footer li {
+  margin-right: 32px;
+}
+
+.left-footer li {
+  margin-left: 32px;
+}
+
+/*** ------- Responsive ------- ***/
+
+/* ------- Expand searchbar when screen expands ------- */
+@media only screen and (min-width: 1250px) {
+  .search {
+    width: 584px;
+  }
+}
+
+/* ------- Make footer stick to the bottom of the page ------- */
+@media only screen and (min-height: 493px) {
+  .footer {
+    position: absolute;
+  }
+}
