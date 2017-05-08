@@ -13,11 +13,7 @@ $(document).ready(function(){
     audioElement.setAttribute('src', 'music.mp3');
     audioElement.play();
 
-
-    var asteroid_kills = 0
-    var current_level = 20
     var position = 133
-    var ready_to_fire = 1
 
     $(document).keydown(function(e) {
       switch(e.which) {
@@ -44,7 +40,9 @@ $(document).ready(function(){
           default: return;
       }
       e.preventDefault();
-    });
+      });
+
+      var ready_to_fire = 1
 
     $(document).keyup(function(e) {
       switch(e.which) {
@@ -64,7 +62,9 @@ $(document).ready(function(){
       e.preventDefault();
     });
 
-/*  ASTEROID LOGIC */
+/*  ADDING ASTEROID LOGIC */
+    var current_level = 20
+
     function add_asteroids(){
         var row1 = Math.floor(Math.random() * current_level);
         var row2 = Math.floor(Math.random() * current_level);
@@ -194,8 +194,10 @@ $(document).ready(function(){
                   }
           };
 
+    setInterval(add_asteroids, 250);
 
-    setInterval(add_asteroids, 200);
+/* KILLING ASTEROID LOGIC */
+  var asteroid_kills = 0
 
     function collision() {
     if (ready_to_fire == 0) {
@@ -380,7 +382,5 @@ $(document).ready(function(){
     }
   }
     setInterval(end_game, 500);
-
-
   }
 });
