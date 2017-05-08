@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-
-.reset-container {
+.button-container {
   width: 304px;
 }
 
@@ -46,10 +45,6 @@
   line-height: 30px;
 }
 
-.red {
-  color: red;
-}
-
 i {
   position: relative;
 }
@@ -63,10 +58,15 @@ i {
 .asteroid img {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.red {
+  color: red;
 }
 
 .fireball {
@@ -80,7 +80,7 @@ i {
 button {
   padding: 10px 30px;
   margin: 0px 2px 15px 2px;
-  z-index: 3;
+  z-index: 2;
 }
 
 .end-game-message {
@@ -96,10 +96,6 @@ button {
   border-bottom: 2px solid black;
 }
 
-#asteroid-1-6, #asteroid-2-6, #asteroid-3-6, #asteroid-4-6, #asteroid-5-6 {
-  position: relative;
-}
-
 .stats {
   margin: 15px 75px;
   height: 80px;
@@ -108,12 +104,11 @@ button {
   justify-content: space-between;
 }
 
-.score-container {
+.number-container {
   padding: 5px 10px;
   border: 2px solid black;
   height: 25px;
   width: 45%;
   text-align: center;
-  vertical-align: middle;
   line-height: 12px;
 }
