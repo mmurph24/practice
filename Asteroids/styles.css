@@ -52,13 +52,13 @@ i {
 .asteroid {
   width: 100%;
   height: 14%;
-  margin-top: 10px
+  margin-top: 10px;
+  position: relative;
 }
 
 .asteroid img {
   height: 100%;
   width: 100%;
-  position: relative;
 }
 
 .hidden {
