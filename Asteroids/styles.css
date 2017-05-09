@@ -86,7 +86,7 @@ button {
 .end-game-message {
   font-size: 36px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .earth {
@@ -111,4 +111,9 @@ button {
   width: 45%;
   text-align: center;
   line-height: 12px;
+}
+
+.explanation {
+  margin-left: 75px;
+  text-align: center;
 }
