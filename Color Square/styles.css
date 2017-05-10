@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.field {
+  height: 500px;
+  width: 500px;
+  margin: 55px;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+}
+
+button {
+  margin: 10px 20px;
+  padding: 10px 25px;
+}
+
+.grid-item {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+}
+
+.button-container {
+  margin: 15px 0px 0px 55px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
