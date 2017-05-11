@@ -1,5 +1,5 @@
-This is the V1 of a crappy little  game I made in a weekend while attempting to learn JQuery. There are a bunch of areas where things can be improved:
+This is the V1 of a crappy little  game I made in a weekend while attempting to learn JQuery. There are a bunch of areas where things can be improved that I'll be working on:
 
-* Smarter logic in generating asteroids without duplicative if statements
-* Real collision detection between the fireball and asteroids instead of relying on .offset() (which breaks if you zoom in)
-* Less randomness in how asteroids are added
+* Using loops to generate asteroids without duplicative if statements
+* Using loops to identify fireball/asteroid collisions without duplicative if statements
+* A better way to handle levels and scoring
