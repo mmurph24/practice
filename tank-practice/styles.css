@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.game {
+  min-width: 510px;
+  height: 510px;
+  background-color: pink;
+}
+
+#tank, #tank-image {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.bullet {
+  position: absolute;
+  height: 13px;
+  margin-left: 18px;
+}
