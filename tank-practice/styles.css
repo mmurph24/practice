@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+}
+
 .game-container {
   display: flex;
   justify-content: center;
@@ -13,7 +17,7 @@
 .game {
   min-width: 510px;
   height: 510px;
-  background-color: pink;
+  background-image: url("images/desert.png");
 }
 
 #tank, #tank-image {
@@ -25,5 +29,6 @@
 .bullet {
   position: absolute;
   height: 13px;
-  margin-left: 18px;
+  margin-left: 23px;
+  font-size: 55px;
 }
