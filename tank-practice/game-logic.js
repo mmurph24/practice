@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var tankDirection = "down";
+var tankDirection = "bottom";
 
   $(document).keydown(function(e) {
     var gameLeft = $(".game").position().left;
@@ -9,6 +9,7 @@ $(document).ready(function(){
     var tankTop = $("#tank").position().top;
     var y1 = tankTop - gameTop;
     var x1 = tankLeft - gameLeft;
+
 
     switch(e.which) {
      case 37: // left
@@ -21,7 +22,7 @@ $(document).ready(function(){
 
      case 38: // up
        $("#tank-image").attr("src","images/tank-top.png");
-       tankDirection = "up";
+       tankDirection = "top";
        if (y1 !== 0) {
          $("#tank").animate({top: '-=20px'}, 10);
        }
@@ -37,19 +38,47 @@ $(document).ready(function(){
 
       case 40: // down
         $("#tank-image").attr("src","images/tank-bottom.png");
-        tankDirection = "down";
+        tankDirection = "bottom";
         if (y1 !== 460) {
           $("#tank").animate({top: '+=20px'}, 10);
         }
         break;
 
       case 32: // spacebar
-    //    $("#tank").append('<img src="images/bullet.png" class="bullet">');
-      //  $(".bullet").animate({top: "+=405px"}, 500);
-
-        alert(y1);
-        alert(x1);
-          break;
+        if (tankDirection === "bottom") {
+          var bulletXOffset = 16 + x1 + "px";
+          var bulletYOffset = y1 + "px";
+          $(".game").prepend('<span class="bullet">.</span>');
+          $(".bullet").css("margin-left", bulletXOffset).css("margin-top", bulletYOffset);
+          $(".bullet").animate({top: "+=500px"}, 500, function(){
+            $(this).remove();
+          });
+        } else if (tankDirection === "top") {
+          var bulletXOffset = 16 + x1 + "px";
+          var bulletYOffset = y1 + "px";
+          $(".game").prepend('<span class="bullet">.</span>');
+          $(".bullet").css("margin-left", bulletXOffset).css("margin-top", bulletYOffset);
+          $(".bullet").animate({top: "-=500px"}, 500, function(){
+            $(this).remove();
+          });
+        } else if (tankDirection === "right") {
+          var bulletXOffset = 21 + x1 + "px";
+          var bulletYOffset = y1 - 21 + "px";
+          $(".game").prepend('<span class="bullet">.</span>');
+          $(".bullet").css("margin-left", bulletXOffset).css("margin-top", bulletYOffset);
+          $(".bullet").animate({left: "+=500px"}, 500, function(){
+            $(this).remove();
+          });
+        } else if (tankDirection === "left") {
+          var bulletXOffset = 21 + x1 + "px";
+          var bulletYOffset = y1 - 21 + "px";
+          $(".game").prepend('<span class="bullet">.</span>');
+          $(".bullet").css("margin-left", bulletXOffset).css("margin-top", bulletYOffset);
+          $(".bullet").animate({left: "-=500px"}, 500, function(){
+            $(this).remove();
+          });
+        }
+        break;
 
        default: return;
    }
