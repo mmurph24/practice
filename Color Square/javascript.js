@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 
     $("#green").click(function(){
-      color = green;
+      color = purple;
     });
 
     $("#orange").click(function(){
